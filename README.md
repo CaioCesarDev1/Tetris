@@ -1,2 +1,2 @@
-# Tetriz
-Jogo tetriz feito em javacript e hmtl.
+# Tetris
+Jogo tetris feito em javacript e hmtl.
