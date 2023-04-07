@@ -1,0 +1,1365 @@
+
+<style>
+body {
+	background-color: rgb(65, 122, 255);
+}
+.menuContainer {
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-110px;
+	margin-top:-40px;
+	background-color: #fff;
+}
+
+.menuFinalContainer {
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-110px;
+	margin-top:-40px;
+	background-color: #fff;
+	height: 150px;
+	width: 150px;
+	flex-direction: column;
+	justify-self: center;
+	text-align: center;
+
+
+}
+
+.container {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	width: auto;	
+}
+.hide1 {
+    display: none;
+}
+.canvas-container {
+	margin-top: 100px;
+	text-align: center;
+	height: 550px;
+	width: 300px;
+	margin-left: 300px;
+	background: url(/Users/caio/Desktop/Tetris/images/bordaprincipal.png);
+}
+.canvas {
+	margin-top: 25px;
+}
+.painelE {
+	background-color: #fff;
+	height: 300px;
+	width: 200px;
+	margin-left: 100px;
+	margin-top: 300px;
+	border: 10px;
+	border-color: rgb(129, 129, 129);
+	border-style: solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-align: center;
+}
+.linhas {
+	margin-bottom: 50px;
+}
+.painelBlocos {
+	background-color: #fff;
+	height: 500px;
+	width: 200px;
+	margin-left: 200px;
+	margin-top: 120px;
+	border: 10px;
+	border-color: rgb(129, 129, 129);
+	border-style: solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-align: center;
+}
+.bloco1 {
+	margin-bottom: -50px
+}
+.bloco2 {
+	margin-bottom: -50px;
+}
+
+.containerRanking {
+	background-color: #fff;
+	height: 300px;
+	width: 300px;
+	margin-left: 1000px;
+	margin-top: 220px;
+	border: 10px;
+	border-color: rgb(129, 129, 129);
+	border-style: solid;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-align: center;
+	border-radius: 18px;
+}
+
+.flex {
+	display: flex;
+}
+
+
+.nomeclaturaRanking {
+	background-color: rgb(4, 133, 213);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	text-align: center;
+	height: 35px;
+	width: 280px;
+	margin-left: 8px;
+	margin-top: 10px;
+	border: solid 2px;
+}
+.colocaçaoA {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 60px;
+}
+.nomeA {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 60px;
+}
+.pontosA {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 60px;
+}
+.primeiroColocado {
+	background-color: rgb(4, 133, 213);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	text-align: center;
+	height: 35px;
+	width: 280px;
+	margin-left: 8px;
+	margin-top: 10px;
+	border: solid 2px;
+}
+.divcolo1A {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.colocaçao1 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;	
+}
+.divcolo1B {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.nome1 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.divcolo1C {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.ponto1 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.segundoColocado {
+	background-color: rgb(4, 133, 213);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	text-align: center;
+	height: 35px;
+	width: 280px;
+	margin-left: 8px;
+	margin-top: 10px;
+	border: solid 2px;
+}
+.divcolo2A {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.colocaçao2 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;	
+}
+.divcolo2B {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.nome2 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.divcolo2C {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.ponto2 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.terceiroColocado {
+	background-color: rgb(4, 133, 213);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	text-align: center;
+	height: 35px;
+	width: 280px;
+	margin-left: 8px;
+	margin-top: 10px;
+	border: solid 2px;
+}
+.divcolo3A {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.colocaçao3 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;	
+}
+.divcolo3B {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.nome3 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.divcolo3C {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.ponto3 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.quartoColocado {
+	background-color: rgb(4, 133, 213);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	text-align: center;
+	height: 35px;
+	width: 280px;
+	margin-left: 8px;
+	margin-top: 10px;
+	border: solid 2px;
+}
+.divcolo4A {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.colocaçao4 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;	
+}
+.divcolo4B {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.nome4 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.divcolo4C {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.ponto4 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.quintoColocado {
+	background-color: rgb(4, 133, 213);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	text-align: center;
+	height: 35px;
+	width: 280px;
+	margin-left: 8px;
+	margin-top: 10px;
+	border: solid 2px;
+}
+.divcolo5A {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.colocaçao5 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;	
+}
+.divcolo5B {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.nome5 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.divcolo5C {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 60px;
+}
+.ponto5 {
+	color: #fff;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.containerImg {
+	padding: 0px;
+	background-color: #fff;
+	position:absolute;
+	margin-top: -470px;
+	margin-left: 250px;
+	width: 150px;
+	height: 600px;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	
+}
+
+.divImg {
+	display: flex;
+	flex-direction: row;
+	margin-left: 15px;
+}
+
+.img {
+	height: 90px;
+	width: 90px;
+	margin: 0px;
+}
+
+.pImg {
+	margin-top: 35px;
+	margin-bottom: 20px;
+}
+</style>
+
+
+<body>
+<div class="menuFinalContainer flex" id="menuFinal">
+	<p>GAME OVER</p>
+	<button onclick="gameAgain()">PLAY AGAIN</button>
+	<p></p>
+	<button onclick="voltarMenu()">NEW NICK</button>
+	
+</div>
+
+<div class="menuContainer" id="menu">
+	<img src="images/Logo.png" alt="Tetris" height="40" width="100">
+	<button onclick="game()">PLAY</button>
+	<p>Digite seu Nick</p>
+	<input type="text" id="name" maxlength="3">
+</div>
+
+<div class="containerRanking flex" id="rank">
+	<div class="nomeclaturaRanking">
+		<p class="colocaçaoA" id="colocaçaoA">Colocação</p>
+		<p class="nomeA" id="nomeA">Nome</p>
+		<p class="pontosA" id="pontosA">Pontos</p>
+	</div>
+	<div class="primeiroColocado" id="div2">
+		<div class="divcolo1A"> <p class="colocaçao1">1</p> </div>
+		<div class="divcolo1B"> <p class="nome1" id="1nome"></p> </div>
+		<div class="divcolo1C"> <p class="ponto1" id="1ponto"></p> </div>
+	</div>
+	<div class="segundoColocado" id="div3">
+		<div class="divcolo2A"> <p class="colocaçao2">2</p> </div>
+		<div class="divcolo2B"> <p class="nome2" id="2nome"></p> </div>
+		<div class="divcolo2C"> <p class="ponto2" id="2ponto"></p> </div>
+	</div>
+	<div class="terceiroColocado" id="div4">
+		<div class="divcolo3A"> <p class="colocaçao3">3</p> </div>
+		<div class="divcolo3B"> <p class="nome3" id="3nome"></p> </div>
+		<div class="divcolo3C"> <p class="ponto3" id="3ponto"></p> </div>
+	</div>
+	<div class="quartoColocado" id="div5">
+		<div class="divcolo4A"> <p class="colocaçao4">4</p> </div>
+		<div class="divcolo4B"> <p class="nome4" id="4nome"></p> </div>
+		<div class="divcolo4C"><p class="ponto4" id="4ponto"></p> </div>
+	</div>
+	<div class="quintoColocado" id="div6">
+		<div class="divcolo5A"> <p class="colocaçao5">5</p> </div>
+		<div class="divcolo5B"> <p class="nome5" id="5nome"></p> </div>
+		<div class="divcolo5C"> <p class="ponto5" id="5ponto"></p> </div>
+	</div>
+</div>
+
+<div class="containerImg flex" id="containerBlocos">
+	<div class="divImg">
+		<img class="img" src="images/Z.png" alt="Z">
+		<p class="pImg" id="Z"></p>
+	</div>
+	<div class="divImg">
+		<img class="img" src="images/S.png" alt="S">
+		<p class="pImg" id="S"></p>
+	</div>
+	<div class="divImg">
+		<img class="img" src="images/T.png" alt="T">
+		<p class="pImg" id="T"></p>
+	</div>
+	<div class="divImg">
+		<img class="img" src="images/O.png" alt="O">
+		<p class="pImg" id="O"></p>
+	</div>
+	<div class="divImg">
+		<img class="img" src="images/L.png" alt="L">
+		<p class="pImg" id="L"></p>
+	</div>
+	<div class="divImg">
+		<img class="img" src="images/I.png" alt="I">
+		<p class="pImg" id="I"></p>
+	</div>
+	<div class="divImg">
+		<img class="img" src="images/J.png" alt="J">
+		<p class="pImg" id="J"></p>
+	</div>
+</div>
+
+<div class="container hide1" id="divContainer1">
+	<p id="paragrafo" class="p">
+	
+	</p>	
+	
+	<div class="painelE">
+		<p class="nivelName">Nivel</p>
+		<p class="nivel" id="nivel"></p>
+		<p class="pontosName">Pontos</p>
+		<p class="pontos" id="pontos"></p>
+		<p class="linhasName">Linhas Eliminadas</p>
+		<p class="linhas" id="linhas"></p>
+	</div>
+	
+	<div class="canvas-container">
+		<canvas class="canvas" id="tela" width="250" height="500"></canvas>
+	</div>
+	
+	<div class="painelBlocos">
+		<img src="" alt="blocos" id="bloco1" class="bloco1">
+		<img src="" alt="blocos" id="bloco2" class="bloco2">
+		<img src="" alt="blocos" id="bloco3" class="bloco3">
+	</div>
+</div>
+
+</body>
+<script>
+/*
+   Jogo: Tetris
+   Autor: Code Explained (www.codeexplained.org)
+   Adaptado por: Gilson Filho
+*/
+
+// Rotina principal
+
+const I = [
+	[
+		[0, 0, 0, 0],
+		[1, 1, 1, 1],
+		[0, 0, 0, 0],
+		[0, 0, 0, 0],
+	],
+	[
+		[0, 0, 1, 0],
+		[0, 0, 1, 0],
+		[0, 0, 1, 0],
+		[0, 0, 1, 0],
+	],
+	[
+		[0, 0, 0, 0],
+		[0, 0, 0, 0],
+		[1, 1, 1, 1],
+		[0, 0, 0, 0],
+	],
+	[
+		[0, 1, 0, 0],
+		[0, 1, 0, 0],
+		[0, 1, 0, 0],
+		[0, 1, 0, 0],
+	]
+];
+
+const J = [
+	[
+		[1, 0, 0],
+		[1, 1, 1],
+		[0, 0, 0]
+	],
+	[
+		[0, 1, 1],
+		[0, 1, 0],
+		[0, 1, 0]
+	],
+	[
+		[0, 0, 0],
+		[1, 1, 1],
+		[0, 0, 1]
+	],
+	[
+		[0, 1, 0],
+		[0, 1, 0],
+		[1, 1, 0]
+	]
+];
+
+const L = [
+	[
+		[0, 0, 1],
+		[1, 1, 1],
+		[0, 0, 0]
+	],
+	[
+		[0, 1, 0],
+		[0, 1, 0],
+		[0, 1, 1]
+	],
+	[
+		[0, 0, 0],
+		[1, 1, 1],
+		[1, 0, 0]
+	],
+	[
+		[1, 1, 0],
+		[0, 1, 0],
+		[0, 1, 0]
+	]
+];
+
+const O = [
+	[
+		[0, 0, 0, 0],
+		[0, 1, 1, 0],
+		[0, 1, 1, 0],
+		[0, 0, 0, 0],
+	]
+];
+
+const S = [
+	[
+		[0, 1, 1],
+		[1, 1, 0],
+		[0, 0, 0]
+	],
+	[
+		[0, 1, 0],
+		[0, 1, 1],
+		[0, 0, 1]
+	],
+	[
+		[0, 0, 0],
+		[0, 1, 1],
+		[1, 1, 0]
+	],
+	[
+		[1, 0, 0],
+		[1, 1, 0],
+		[0, 1, 0]
+	]
+];
+
+const T = [
+	[
+		[0, 1, 0],
+		[1, 1, 1],
+		[0, 0, 0]
+	],
+	[
+		[0, 1, 0],
+		[0, 1, 1],
+		[0, 1, 0]
+	],
+	[
+		[0, 0, 0],
+		[1, 1, 1],
+		[0, 1, 0]
+	],
+	[
+		[0, 1, 0],
+		[1, 1, 0],
+		[0, 1, 0]
+	]
+];
+
+const Z = [
+	[
+		[1, 1, 0],
+		[0, 1, 1],
+		[0, 0, 0]
+	],
+	[
+		[0, 0, 1],
+		[0, 1, 1],
+		[0, 1, 0]
+	],
+	[
+		[0, 0, 0],
+		[1, 1, 0],
+		[0, 1, 1]
+	],
+	[
+		[0, 1, 0],
+		[1, 1, 0],
+		[1, 0, 0]
+	]
+];
+
+const PECAS = [
+    [Z, "green", "images/Z.png"],
+    [S, "red", "images/S.png"],
+    [T, "purple", "images/T.png"],
+    [O, "yellow", "images/O.png"],
+    [L, "violet", "images/L.png"],
+    [I, "blue", "images/I.png"],
+    [J, "orange", "images/J.png"]
+];
+
+const LINHA = 20;
+const COLUNA = 10;
+const TAMANHO = 25;
+const VAGO = "black";
+
+var peca;
+var tabuleiro = [];
+var pecasNovas = [];
+var ranking = [];
+var nomess = [];
+var pontoss = [];
+
+var inicioDescida;
+var fimDeJogo = false;
+var fim = false
+var podeMover = true;
+var velocidade = 1000;
+var contagemMulti = 0;
+var contagemNivel = 0;
+var contagemLinhas = 0;
+var nivel = 1;
+var pontos = 0;
+var jogador;
+var contagemZ = 0;
+var contagemS = 0;
+var contagemT = 0;
+var contagemO = 0;
+var contagemL = 0;
+var contagemI = 0;
+var contagemJ = 0;
+var temaMusic = 0;
+
+jogador = {
+	nome: "",
+	pontosFeitos: 0
+}
+
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+var paragrafo = document.getElementById("paragrafo");
+var contadorPontos = document.getElementById("pontos");
+var contadorLinhas = document.getElementById("linhas");
+var contadorNivel = document.getElementById("nivel");
+var containerPrincipal = document.getElementById("divContainer1");
+var containerMenu = document.getElementById("menu");
+var containerMenuFinal = document.getElementById("menuFinal");
+var nomeJogador = document.getElementById("name");
+var containerRanking = document.getElementById("rank");
+var containerBlocos = document.getElementById("containerBlocos");
+var posNome1 = document.getElementById("1nome");
+var posNome2 = document.getElementById("2nome");
+var posNome3 = document.getElementById("3nome");
+var posNome4 = document.getElementById("4nome");
+var posNome5 = document.getElementById("5nome");
+var posPonto1 = document.getElementById("1ponto");
+var posPonto2 = document.getElementById("2ponto");
+var posPonto3 = document.getElementById("3ponto");
+var posPonto4 = document.getElementById("4ponto");
+var posPonto5 = document.getElementById("5ponto");
+var contadorZ = document.getElementById("Z");
+var contadorS = document.getElementById("S");
+var contadorT = document.getElementById("T");
+var contadorO = document.getElementById("O");
+var contadorL = document.getElementById("L");
+var contadorI = document.getElementById("I");
+var contadorJ = document.getElementById("J");
+
+mover = new Audio("audio/mover.mp3");
+colisaoBlock = new Audio("audio/colisao.mp3");
+girar = new Audio("audio/girasBloco.mp3");
+quebrarLinha = new Audio("audio/quebraDeLinha.mp3");
+tema = new Audio("audio/themeMusicGameplay1.mp3");
+gameOver = new Audio("audio/gameover.wav");
+select = new Audio("audio/selection.wav");
+
+containerMenuFinal.classList.remove("flex");
+containerMenuFinal.classList.add("hide1");
+containerBlocos.classList.remove("flex");
+containerBlocos.classList.add("hide1");
+
+
+atualizarRank();
+
+function game() {
+	select.play();
+	zerarContagemBlocos()
+
+	peca;
+	tabuleiro = [];
+	pecasNovas = [];
+
+	inicioDescida;
+	fimDeJogo = false;
+	fim = false
+	podeMover = true;
+	velocidade = 1000;
+	contagemMulti = 0;
+	contagemNivel = 0;
+	contagemLinhas = 0;
+	nivel = 1;
+	pontos = 0;
+
+containerPrincipal.classList.remove("hide1");
+containerMenu.classList.add("hide1");
+containerRanking.classList.add("hide1");
+containerRanking.classList.remove("flex")
+containerBlocos.classList.remove("flex");
+containerBlocos.classList.add("hide1");
+
+onkeydown = controlarPeca;
+
+inciarTema()
+
+iniciarTabuleiro();
+
+desenharTabuleiro();
+
+gerarPeca();
+
+inicioDescida = Date.now();
+
+descerPeca();
+
+}
+
+
+// Sub-rotinas (funções)
+
+function iniciarTabuleiro() {
+	for (var i = 0; i < LINHA; i++) {
+		tabuleiro[i] = [];
+		
+		for (var j = 0; j < COLUNA; j++) {
+			tabuleiro[i][j] = VAGO;
+		}
+	}
+}
+
+function desenharTabuleiro(){
+    for (var i = 0; i < LINHA; i++) {
+        for (var j = 0; j < COLUNA; j++) {
+            desenharQuadrado(j, i, tabuleiro[i][j]);
+        }
+    }
+}
+
+function desenharQuadrado(x, y, cor){
+    c.fillStyle = cor;
+    c.fillRect(x*TAMANHO, y*TAMANHO, TAMANHO, TAMANHO);
+
+    c.strokeStyle = "gray";
+    c.strokeRect(x*TAMANHO, y*TAMANHO, TAMANHO, TAMANHO);
+}
+
+function gerarPeca(){
+	if(pecasNovas.length == 0) {
+		for(let i = 0; i < 4;) {
+			let r = Math.floor(Math.random() * PECAS.length);
+			if(pecasNovas[i - 1] == r) {
+			} else {
+				pecasNovas.push(r);
+				++i;
+		}
+	}
+
+	contarBlocos(pecasNovas[0]);
+
+} else if(pecasNovas.length == 4) {
+	pecasNovas.shift();
+	for(let key = 0; key < 1;) {
+		let r = Math.floor(Math.random() * PECAS.length);
+		if(pecasNovas[2] == r) {
+		} else {
+			pecasNovas.push(r);
+			key = 1;
+			contarBlocos(pecasNovas[0]);
+		}
+	}
+}
+
+MudarImagem()
+
+	peca = {
+		tetramino : PECAS[pecasNovas[0]][0],
+		cor : PECAS[pecasNovas[0]][1],
+		src : PECAS[pecasNovas[0]][2],
+		tetraminoN : 0,
+		tetraminoAtivo : [[]],
+		x : 3,
+		y : -2
+	};
+	
+	peca.tetraminoAtivo = peca.tetramino[peca.tetraminoN];
+	contadorPontos.innerHTML = Number(pontos);
+	contadorLinhas.innerHTML = Number(contagemLinhas);
+	contadorNivel.innerHTML = Number(nivel);
+}
+
+function descerPeca(){
+    var agora = Date.now();
+    var delta = agora - inicioDescida;
+	
+    if (delta > velocidade) {
+        moverAbaixo();
+        inicioDescida = Date.now();
+    }
+	
+    if (!fimDeJogo) {
+        requestAnimationFrame(descerPeca);
+    }
+}
+
+function moverAbaixoForte(){
+
+        apagarPeca();
+        while(!colisao(0, 1, peca.tetraminoAtivo) == true) {
+			peca.y++;
+			pontos = pontos + 2;
+		}
+        desenharPeca();
+
+		colisaoBlock.play();
+        travarPeca();
+        gerarPeca();
+
+}
+
+function moverAbaixo(){
+    if (!colisao(0, 1, peca.tetraminoAtivo)) {
+        apagarPeca();
+        peca.y++;
+        desenharPeca();
+    } else {
+		colisaoBlock.play();
+        travarPeca();
+        gerarPeca();
+    }
+    
+}
+
+function moverAbaixoX(){
+    if (!colisao(0, 1, peca.tetraminoAtivo)) {
+        apagarPeca();
+        peca.y++;
+		pontos = pontos + 1;
+        desenharPeca();
+    } else {
+		colisaoBlock.play();
+        travarPeca();
+        gerarPeca();
+    }
+}
+
+function moverDireita(){
+    if (!colisao(1, 0, peca.tetraminoAtivo)) {
+        apagarPeca();
+        peca.x++;
+        desenharPeca();
+    }
+}
+
+function moverEsquerda(){
+    if (!colisao(-1, 0, peca.tetraminoAtivo)) {
+        apagarPeca();
+        peca.x--;
+        desenharPeca();
+    }
+}
+
+function colisao(x, y, p){
+    for (var i = 0; i < p.length; i++) {
+        for (var j = 0; j < p.length; j++) {
+            if (!p[i][j]) {
+                continue;
+            }
+			
+            var novoX = peca.x + j + x;
+            var novoY = peca.y + i + y;
+			
+            if (novoX < 0 || novoX >= COLUNA || novoY >= LINHA) {
+                return true;
+            }
+			
+            if (novoY < 0) {
+                continue;
+            }
+			
+            if (tabuleiro[novoY][novoX] != VAGO) {
+                return true;
+            }
+        }
+    }
+	
+    return false;
+}
+
+function apagarPeca(){
+    preencherPeca(VAGO);
+}
+
+function desenharPeca(){
+    preencherPeca(peca.cor);
+}
+
+function preencherPeca(cor) {
+    for (var i = 0; i < peca.tetraminoAtivo.length; i++) {
+        for (var j = 0; j < peca.tetraminoAtivo.length; j++) {
+            if (peca.tetraminoAtivo[i][j]) {
+                desenharQuadrado(peca.x + j, peca.y + i, cor);
+            }
+        }
+    }
+}
+
+function travarPeca(){
+    for (var i = 0; i < peca.tetraminoAtivo.length; i++) {
+        for (var j = 0; j < peca.tetraminoAtivo.length; j++) {
+            if (!peca.tetraminoAtivo[i][j]) {
+                continue;
+            }
+
+            if (peca.y + i < 0) {
+				containerMenuFinal.classList.remove("hide1");
+	            containerMenuFinal.classList.add("flex");
+				containerPrincipal.classList.add("hide1");
+				containerRanking.classList.remove("hide1");
+				containerRanking.classList.add("flex");
+				containerBlocos.classList.remove("hide1");
+				containerBlocos.classList.add("flex");
+				fimDeJogo = true;
+				adicionarJogador();
+				console.log(ranking);
+				console.log(pontoss);
+				console.log(nomess);
+				diminuirContagemBlocos();
+				organizarRanking();
+				atualizarRank();
+				aparecerContagemBlocos();
+				console.log(ranking);
+				finalizarTema();
+				gameOver.play();
+                break;
+            }
+
+            tabuleiro[peca.y+i][peca.x+j] = peca.cor;
+        }
+    }
+
+    for (var i = 0; i < LINHA; i++) {
+        var linhaCheia = true;
+		
+        for (var j = 0; j < COLUNA; j++) {
+            linhaCheia = linhaCheia && (tabuleiro[i][j] != VAGO);
+        }
+		
+        if (linhaCheia) {
+            for (var y = i; y > 1; y--) {
+                for (var j = 0; j < COLUNA; j++) {
+                    tabuleiro[y][j] = tabuleiro[y-1][j];
+                }
+            }
+			
+            for (var j = 0; j < COLUNA; j++) {
+                tabuleiro[0][j] = VAGO;
+
+            }
+			quebrarLinha.play();
+			contagemLinhas++;
+			contagemNivel++;
+			contagemMulti++;
+			controlarVelocidade();
+        }
+
+    }
+	
+	contagemMultiplicos(contagemMulti);
+    desenharTabuleiro();
+}
+
+function rodarPeca(){
+    var proximoPadrao = peca.tetramino[(peca.tetraminoN + 1) % peca.tetramino.length];
+    var recuo = 0;
+    
+    if (colisao(0, 0, proximoPadrao)) {
+        if (peca.x > COLUNA/2) {
+            recuo = -1;
+        } else {
+            recuo = 1;
+        }
+    }
+    
+    if (!colisao(recuo, 0, proximoPadrao)) {
+        apagarPeca();
+        peca.x += recuo;
+        peca.tetraminoN = (peca.tetraminoN + 1) % peca.tetramino.length;
+        peca.tetraminoAtivo = peca.tetramino[peca.tetraminoN];
+        desenharPeca();
+    }
+
+
+}
+
+function controlarPeca(evento){
+	if(!fimDeJogo == false) {
+
+	} else {
+
+	if(!podeMover) {
+		return false;
+	}
+	var tecla = evento.keyCode;
+	
+    if (tecla == 37) {
+		mover.play();
+        moverEsquerda();
+        inicioDescida = Date.now();
+    } else if (tecla == 38 || tecla == 90) {
+		girar.play();
+        rodarPeca();
+        inicioDescida = Date.now();
+    } else if (tecla == 39) {
+		mover.play();
+        moverDireita();
+        inicioDescida = Date.now();
+    } else if (tecla == 40) {
+		mover.play();
+        moverAbaixoX();
+		inicioDescida = Date.now();
+    } else if(tecla == 32) {
+		moverAbaixoForte()
+		inicioDescida = Date.now();
+	}
+	}
+}
+function controlarVelocidade() {
+		if(contagemNivel == 10){
+			contagemNivel = 0;
+			nivel++;
+			velocidade = velocidade - (velocidade / 5);
+		} else {
+			
+		}
+}
+
+function contagemMultiplicos(numero){
+	if(numero == 1) {
+		pontos = pontos + (100 * nivel);
+	}
+	if(numero == 2) {
+		pontos = pontos + (300 * nivel);
+	}
+	if(numero == 3) {
+		pontos = pontos + (500 * nivel);
+	}
+	if(numero >= 4) {
+		pontos = pontos + (800 * nivel);
+	}
+
+	contagemMulti = 0;
+}
+
+function MudarImagem() {
+	document.getElementById("bloco1").src = PECAS[pecasNovas[1]][2];
+	document.getElementById("bloco2").src = PECAS[pecasNovas[2]][2];
+	document.getElementById("bloco3").src = PECAS[pecasNovas[3]][2];
+}
+
+function adicionarJogador() {
+	const j = ranking.length;
+		for(let i = j; i < (j + 1); ++i) {
+			
+			if(nomeJogador.value == nomess[i - 1]) {
+				if(pontos > jogador.pontosFeitos) {
+					jogador = {
+					nome: nomeJogador.value,
+					pontosFeitos: pontos
+					
+				}
+				ranking[i - 1] = jogador;
+				nomess[i - 1] = jogador.nome;
+				pontoss[i - 1] = jogador.pontosFeitos;
+				} else { }
+			} else {
+				jogador = {
+				nome: nomeJogador.value,
+				pontosFeitos: pontos
+				}
+				ranking.push(jogador);
+				nomess.push(jogador.nome);
+				pontoss.push(jogador.pontosFeitos);
+
+				for(let x = 0; x < i - 1; ++x) {
+					if(nomess[i] == nomess[x]) {
+						if(pontos > ranking[x].pontosFeitos) {
+							ranking[x] = ranking[i];
+							nomess[x] = nomess[i];
+							pontoss[x] = pontoss[i];
+							ranking.pop();
+							nomess.pop();
+							pontoss.pop();	
+						} else {
+							ranking.pop();
+							nomess.pop();
+							pontoss.pop();	
+						}
+					}
+				}
+			}
+		}
+}
+
+function organizarRanking() {
+	var aux;
+	var auxp;
+	var auxn;
+
+	for(let i = 0; i < ranking.length - 1; i++) {
+		for(let j = 0; j < ranking.length - 1 - i; j++) {
+			if(pontoss[j] > pontoss[j+1]) {
+				aux = ranking[j];
+				ranking[j] = ranking[j + 1];
+				ranking[j + 1] = aux;
+				auxp = pontoss[j];
+				pontoss[j] = pontoss[j + 1];
+				pontoss[j + 1] = auxp;
+				auxn = nomess[j];
+				nomess[j] = nomess[j + 1];
+				nomess[j + 1] = auxn;
+			}
+		}
+	}
+	ranking.reverse();
+	pontoss.reverse();
+	nomess.reverse();
+}
+	
+function atualizarRank() {
+	if(nomess[0] == null) {
+		posNome1.innerHTML = "--"
+		posPonto1.innerHTML = "--"
+	} else {
+		posNome1.innerHTML = nomess[0];
+		posPonto1.innerHTML = pontoss[0];
+	}
+
+	if(nomess[1] == null) {
+		posNome2.innerHTML = "--"
+		posPonto2.innerHTML = "--"
+	} else {
+		posNome2.innerHTML = nomess[1];
+		posPonto2.innerHTML = pontoss[1];
+	}
+
+	if(nomess[2] == null) {
+		posNome3.innerHTML = "--"
+		posPonto3.innerHTML = "--"
+	} else {
+		posNome3.innerHTML = nomess[2];
+		posPonto3.innerHTML = pontoss[2];
+	}
+
+	if(nomess[3] == null) {
+		posNome4.innerHTML = "--"
+		posPonto4.innerHTML = "--"
+	} else {
+		posNome4.innerHTML = nomess[3];
+		posPonto4.innerHTML = pontoss[3];
+	}
+
+	if(nomess[4] == null) {
+		posNome5.innerHTML = "--"
+		posPonto5.innerHTML = "--"
+	} else {
+		posNome5.innerHTML = nomess[4];
+		posPonto5.innerHTML = pontoss[4];
+	}
+
+	for(let i = 0; i < nomess.length; i++) {
+		if(nomess[i] == "") {
+			nomess.slice(i);
+		}
+	}
+}
+
+function gameAgain() {
+	containerMenuFinal.classList.remove("flex");
+	containerMenuFinal.classList.add("hide1");
+	game();
+}
+
+function voltarMenu() {
+	select.play();
+	containerMenuFinal.classList.remove("flex");
+	containerMenuFinal.classList.add("hide1");
+	containerMenu.classList.remove("hide1");
+	containerBlocos.classList.remove("flex");
+	containerBlocos.classList.add("hide1");
+	nomeJogador.value = "";
+}
+
+function contarBlocos(x) {
+	if(x == 0) {
+		contagemZ++;
+	} else if(x == 1) {
+		contagemS++;
+	} else if(x == 2) {
+		contagemT++;
+	} else if(x == 3) {
+		contagemO++
+	} else if(x == 4) {
+		contagemL++;
+	} else if(x == 5) {
+		contagemI++;
+	} else if(x == 6) {
+		contagemJ++
+	}
+
+	contadorZ.innerHTML = contagemZ;
+	contadorS.innerHTML = contagemS;
+	contadorT.innerHTML = contagemT;
+	contadorO.innerHTML = contagemO;
+	contadorL.innerHTML = contagemL;
+	contadorI.innerHTML = contagemI;
+	contadorJ.innerHTML = contagemJ;
+
+	console.log("Z " + contagemZ);
+	console.log("S " + contagemS);
+	console.log("T " + contagemT);
+	console.log("O " + contagemO);
+	console.log("L " + contagemL);
+	console.log("I " + contagemI);
+	console.log("J " + contagemJ);
+}	
+
+function zerarContagemBlocos() {
+	contagemZ = 0;
+	contagemS = 0;
+	contagemT = 0;
+	contagemO = 0;
+	contagemL = 0;
+	contagemI = 0;
+	contagemJ = 0;
+}
+
+function diminuirContagemBlocos() {
+for(let i = 0; i < pecasNovas; i++) {
+		if(pecasNovas[i] == 0) {
+			contagemZ--
+		} else if(pecasNovas[i] == 1) {
+			contagemS--
+		} else if(pecasNovas[i] == 2) {
+			contagemT--
+		} else if(pecasNovas[i] == 3) {
+			contagemO--
+		} else if(pecasNovas[i] == 4) {
+			contagemL--
+		} else if(pecasNovas[i] == 5) {
+			contagemI--
+		} else if(pecasNovas[i] == 6) {
+			contagemJ--
+		}
+	}
+}
+
+function aparecerContagemBlocos() {
+	contadorZ.innerHTML = contagemZ;
+	contadorS.innerHTML = contagemS;
+	contadorT.innerHTML = contagemT;
+	contadorO.innerHTML = contagemO;
+	contadorL.innerHTML = contagemL;
+	contadorI.innerHTML = contagemI;
+	contadorJ.innerHTML = contagemJ;
+}
+
+function inciarTema() {
+		tema.play();
+		tema.loop = true;
+}
+
+function finalizarTema() {
+	tema.pause();
+}
+
+
+</script>
